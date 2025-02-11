@@ -1,0 +1,403 @@
+2025-02-06 15:56:52,232 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.104:5000
+2025-02-06 15:56:52,233 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-06 15:56:52,234 - werkzeug - INFO -  * Restarting with stat
+2025-02-06 15:56:52,775 - werkzeug - WARNING -  * Debugger is active!
+2025-02-06 15:56:52,783 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-06 15:57:39,032 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 15:57:39] "GET / HTTP/1.1" 200 -
+2025-02-06 15:57:39,060 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 15:57:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-06 15:58:36,247 - utils.predictions - ERROR - Model prediction failed: Can't get attribute 'log1p_transform' on <module '__main__' from 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py'>
+2025-02-06 15:58:36,248 - __main__ - ERROR - Unhandled exception in /predict
+Traceback (most recent call last):
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 173, in predict_price_from_multiple_models
+    cat_model = joblib.load(MODEL_PATH_CAT)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 1574, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 325, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+AttributeError: Can't get attribute 'log1p_transform' on <module '__main__' from 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\app.py", line 24, in predict
+    result = run_prediction(payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 208, in run_prediction
+    raw_predictions = predict_price_from_multiple_models(age, distance, make, model_, variant,
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 178, in predict_price_from_multiple_models
+    raise RuntimeError(f"Error during prediction: {e}")
+RuntimeError: Error during prediction: Can't get attribute 'log1p_transform' on <module '__main__' from 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py'>
+2025-02-06 15:58:36,253 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 15:58:36] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-02-06 16:01:13,063 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\utils\\predictions.py', reloading
+2025-02-06 16:01:13,230 - werkzeug - INFO -  * Restarting with stat
+2025-02-06 16:01:13,758 - werkzeug - WARNING -  * Debugger is active!
+2025-02-06 16:01:13,767 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-06 16:01:32,153 - utils.predictions - ERROR - Model prediction failed: Can't get attribute 'log1p_transform' on <module '__main__' from 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py'>
+2025-02-06 16:01:32,153 - __main__ - ERROR - Unhandled exception in /predict
+Traceback (most recent call last):
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 180, in predict_price_from_multiple_models
+    cat_model = joblib.load(MODEL_PATH_CAT)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 1574, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 325, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+AttributeError: Can't get attribute 'log1p_transform' on <module '__main__' from 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\app.py", line 24, in predict
+    result = run_prediction(payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 215, in run_prediction
+    raw_predictions = predict_price_from_multiple_models(age, distance, make, model_, variant,
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 185, in predict_price_from_multiple_models
+    raise RuntimeError(f"Error during prediction: {e}")
+RuntimeError: Error during prediction: Can't get attribute 'log1p_transform' on <module '__main__' from 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py'>
+2025-02-06 16:01:32,163 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:01:32] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-02-06 16:01:34,259 - utils.predictions - ERROR - Model prediction failed: Can't get attribute 'log1p_transform' on <module '__main__' from 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py'>
+2025-02-06 16:01:34,259 - __main__ - ERROR - Unhandled exception in /predict
+Traceback (most recent call last):
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 180, in predict_price_from_multiple_models
+    cat_model = joblib.load(MODEL_PATH_CAT)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 1574, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 325, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+AttributeError: Can't get attribute 'log1p_transform' on <module '__main__' from 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\app.py", line 24, in predict
+    result = run_prediction(payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 215, in run_prediction
+    raw_predictions = predict_price_from_multiple_models(age, distance, make, model_, variant,
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 185, in predict_price_from_multiple_models
+    raise RuntimeError(f"Error during prediction: {e}")
+RuntimeError: Error during prediction: Can't get attribute 'log1p_transform' on <module '__main__' from 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py'>
+2025-02-06 16:01:34,259 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:01:34] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-02-06 16:02:31,405 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\utils\\predictions.py', reloading
+2025-02-06 16:02:31,614 - werkzeug - INFO -  * Restarting with stat
+2025-02-06 16:02:32,188 - werkzeug - WARNING -  * Debugger is active!
+2025-02-06 16:02:32,195 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-06 16:02:39,446 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py', reloading
+2025-02-06 16:02:39,533 - werkzeug - INFO -  * Restarting with stat
+2025-02-06 16:02:40,086 - werkzeug - WARNING -  * Debugger is active!
+2025-02-06 16:02:40,088 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-06 16:02:43,220 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py', reloading
+2025-02-06 16:02:43,330 - werkzeug - INFO -  * Restarting with stat
+2025-02-06 16:02:43,871 - werkzeug - WARNING -  * Debugger is active!
+2025-02-06 16:02:43,878 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-06 16:02:48,024 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py', reloading
+2025-02-06 16:02:48,125 - werkzeug - INFO -  * Restarting with stat
+2025-02-06 16:02:48,635 - werkzeug - WARNING -  * Debugger is active!
+2025-02-06 16:02:48,635 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-06 16:03:06,744 - utils.predictions - ERROR - Model prediction failed: name 'np' is not defined
+2025-02-06 16:03:06,745 - __main__ - ERROR - Unhandled exception in /predict
+Traceback (most recent call last):
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 180, in predict_price_from_multiple_models
+    prediction = cat_model.predict(input_data)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\pipeline.py", line 787, in predict
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1101, in transform
+    Xs = self._call_func_on_transformers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 910, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\pipeline.py", line 1531, in _transform_one
+    res = transformer.transform(X, **params.transform)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1101, in transform
+    Xs = self._call_func_on_transformers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 910, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\pipeline.py", line 1531, in _transform_one
+    res = transformer.transform(X, **params.transform)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\pipeline.py", line 1092, in transform
+    Xt = transform.transform(Xt, **routed_params[name].transform)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\preprocessing\_function_transformer.py", line 260, in transform
+    out = self._transform(X, func=self.func, kw_args=self.kw_args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\sklearn\preprocessing\_function_transformer.py", line 387, in _transform
+    return func(X, **(kw_args if kw_args else {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\app.py", line 42, in log1p_transform
+    return np.log1p(x)
+           ^^
+NameError: name 'np' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\app.py", line 24, in predict
+    result = run_prediction(payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 214, in run_prediction
+    raw_predictions = predict_price_from_multiple_models(age, distance, make, model_, variant,
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 184, in predict_price_from_multiple_models
+    raise RuntimeError(f"Error during prediction: {e}")
+RuntimeError: Error during prediction: name 'np' is not defined
+2025-02-06 16:03:06,755 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:03:06] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-02-06 16:03:19,515 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py', reloading
+2025-02-06 16:03:19,684 - werkzeug - INFO -  * Restarting with stat
+2025-02-06 16:03:20,336 - werkzeug - WARNING -  * Debugger is active!
+2025-02-06 16:03:20,339 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-06 16:03:22,459 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py', reloading
+2025-02-06 16:03:22,570 - werkzeug - INFO -  * Restarting with stat
+2025-02-06 16:03:23,209 - werkzeug - WARNING -  * Debugger is active!
+2025-02-06 16:03:23,211 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-06 16:03:33,101 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:03:33] "POST /predict HTTP/1.1" 200 -
+2025-02-06 16:03:39,189 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:03:39] "POST /predict HTTP/1.1" 200 -
+2025-02-06 16:03:42,070 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:03:42] "POST /predict HTTP/1.1" 200 -
+2025-02-06 16:03:46,737 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:03:46] "POST /predict HTTP/1.1" 200 -
+2025-02-06 16:04:00,163 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:04:00] "POST /predict HTTP/1.1" 200 -
+2025-02-06 16:05:27,379 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py', reloading
+2025-02-06 16:05:27,558 - werkzeug - INFO -  * Restarting with stat
+2025-02-06 16:06:14,611 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.104:5000
+2025-02-06 16:06:14,611 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-06 16:06:14,613 - werkzeug - INFO -  * Restarting with stat
+2025-02-06 16:06:15,138 - werkzeug - WARNING -  * Debugger is active!
+2025-02-06 16:06:15,140 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-06 16:06:20,411 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:06:20] "POST /predict HTTP/1.1" 200 -
+2025-02-06 16:06:22,025 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:06:22] "POST /predict HTTP/1.1" 200 -
+2025-02-06 16:06:23,071 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:06:23] "POST /predict HTTP/1.1" 200 -
+2025-02-06 16:06:32,281 - utils.predictions - WARNING - No data available for the selected Make-Model-Variant.
+2025-02-06 16:06:32,283 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:06:32] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-02-06 16:06:35,849 - utils.predictions - WARNING - No data available for the selected Make-Model-Variant.
+2025-02-06 16:06:35,850 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:06:35] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-02-06 16:06:40,344 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:06:40] "POST /predict HTTP/1.1" 200 -
+2025-02-06 16:34:53,921 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:34:53] "POST /predict HTTP/1.1" 200 -
+2025-02-06 16:34:58,177 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:34:58] "POST /predict HTTP/1.1" 200 -
+2025-02-06 16:36:00,211 - utils.predictions - WARNING - No data available for the selected Make-Model-Variant.
+2025-02-06 16:36:00,212 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:36:00] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-02-06 16:36:04,357 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:36:04] "POST /predict HTTP/1.1" 200 -
+2025-02-07 15:57:56,469 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.106:5000
+2025-02-07 15:57:56,469 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-07 15:57:56,478 - werkzeug - INFO -  * Restarting with stat
+2025-02-07 15:57:58,374 - werkzeug - WARNING -  * Debugger is active!
+2025-02-07 15:57:58,389 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-07 15:58:35,670 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 15:58:35] "POST /predict HTTP/1.1" 200 -
+2025-02-07 15:58:46,021 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 15:58:46] "POST /predict HTTP/1.1" 200 -
+2025-02-07 16:05:31,768 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 16:05:31] "POST /predict HTTP/1.1" 200 -
+2025-02-07 16:12:42,639 - utils.predictions - WARNING - No data available for the selected Make-Model-Variant.
+2025-02-07 16:12:42,648 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 16:12:42] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-02-07 17:35:50,824 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.106:5000
+2025-02-07 17:35:50,826 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-07 17:35:50,830 - werkzeug - INFO -  * Restarting with stat
+2025-02-07 17:35:52,240 - werkzeug - WARNING -  * Debugger is active!
+2025-02-07 17:35:52,249 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-07 17:36:40,084 - __main__ - ERROR - Unhandled exception in /predict
+Traceback (most recent call last):
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\app.py", line 24, in predict
+    result = run_prediction(payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 202, in run_prediction
+    age = 2025 - payload["year"]
+                 ~~~~~~~^^^^^^^^
+KeyError: 'year'
+2025-02-07 17:36:40,088 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 17:36:40] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-02-07 17:37:58,975 - utils.predictions - WARNING - Missing parameter: age
+2025-02-07 17:37:59,069 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 17:37:59] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-02-07 17:38:38,050 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\utils\\predictions.py', reloading
+2025-02-07 17:38:38,252 - werkzeug - INFO -  * Restarting with stat
+2025-02-07 17:38:40,072 - werkzeug - WARNING -  * Debugger is active!
+2025-02-07 17:38:40,075 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-07 17:38:40,785 - utils.predictions - WARNING - No data available for the selected Make-Model-Variant.
+2025-02-07 17:38:40,786 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 17:38:40] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-02-07 17:39:22,004 - utils.predictions - WARNING - Petrol car older than 15 years in restricted city.
+2025-02-07 17:39:22,005 - utils.predictions - WARNING - Cannot predict a valid price under current regulations/constraints.
+2025-02-07 17:39:22,006 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 17:39:22] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-02-07 17:39:34,737 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 17:39:34] "POST /predict HTTP/1.1" 200 -
+2025-02-07 17:40:34,882 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 17:40:34] "POST /predict HTTP/1.1" 200 -
+2025-02-07 17:40:44,448 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 17:40:44] "POST /predict HTTP/1.1" 200 -
+2025-02-07 17:40:45,984 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 17:40:45] "POST /predict HTTP/1.1" 200 -
+2025-02-07 17:40:52,246 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 17:40:52] "POST /predict HTTP/1.1" 200 -
+2025-02-07 17:41:00,366 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 17:41:00] "POST /predict HTTP/1.1" 200 -
+2025-02-10 15:33:40,522 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.104:5000
+2025-02-10 15:33:40,524 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 15:33:40,527 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 15:33:41,388 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 15:33:41,391 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-10 15:34:06,614 - utils.predictions - ERROR - Model prediction failed: Can't get attribute 'log1p_transform' on <module '__main__' from 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py'>
+2025-02-10 15:34:06,615 - __main__ - ERROR - Unhandled exception in /predict
+Traceback (most recent call last):
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 179, in predict_price_from_multiple_models
+    cat_model = joblib.load(MODEL_PATH_CAT)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\venv\Lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 1205, in load
+    dispatch[key[0]](self)
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 1530, in load_stack_global
+    self.append(self.find_class(module, name))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 1574, in find_class
+    return _getattribute(sys.modules[module], name)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\anaconda3\Lib\pickle.py", line 325, in _getattribute
+    raise AttributeError("Can't get attribute {!r} on {!r}"
+AttributeError: Can't get attribute 'log1p_transform' on <module '__main__' from 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\app.py", line 112, in predict
+    result = run_prediction(payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 214, in run_prediction
+    raw_predictions = predict_price_from_multiple_models(age, distance, make, model_, variant,
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohan\OneDrive\Desktop\flask-final2\utils\predictions.py", line 184, in predict_price_from_multiple_models
+    raise RuntimeError(f"Error during prediction: {e}")
+RuntimeError: Error during prediction: Can't get attribute 'log1p_transform' on <module '__main__' from 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py'>
+2025-02-10 15:34:06,620 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 15:34:06] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-02-10 15:34:41,931 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py', reloading
+2025-02-10 15:34:42,180 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 15:34:43,060 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 15:34:43,062 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-10 15:35:02,275 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\app.py', reloading
+2025-02-10 15:35:02,368 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 15:35:03,171 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 15:35:03,173 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-10 15:35:24,176 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 15:35:24] "POST /predict HTTP/1.1" 200 -
+2025-02-10 15:35:33,085 - utils.predictions - WARNING - No data available for the selected Make-Model-Variant.
+2025-02-10 15:35:33,086 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 15:35:33] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-02-10 17:25:28,339 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.104:5000
+2025-02-10 17:25:28,339 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 17:25:28,346 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 17:25:28,904 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 17:25:28,906 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-10 17:25:34,543 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 17:25:34] "GET / HTTP/1.1" 200 -
+2025-02-10 17:25:34,578 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 17:25:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-10 17:25:54,113 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.104:5000
+2025-02-10 17:25:54,114 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 17:25:54,114 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 17:25:54,763 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 17:25:54,771 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-10 17:26:02,229 - utils.predictions - WARNING - No data available for the selected Make-Model-Variant.
+2025-02-10 17:26:02,230 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 17:26:02] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-02-10 17:26:38,140 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\constants.py', reloading
+2025-02-10 17:26:38,222 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 17:26:38,902 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 17:26:38,902 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-10 17:26:40,004 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rohan\\OneDrive\\Desktop\\flask-final2\\constants.py', reloading
+2025-02-10 17:26:40,118 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 17:27:05,964 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.104:5000
+2025-02-10 17:27:05,964 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 17:27:05,964 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 17:27:08,275 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 17:27:08,275 - werkzeug - INFO -  * Debugger PIN: 427-685-120
+2025-02-10 17:27:23,191 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 17:27:23] "POST /predict HTTP/1.1" 200 -
